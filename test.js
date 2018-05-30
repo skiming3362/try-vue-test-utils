@@ -22,4 +22,15 @@ describe('Counter', () => {
     button.trigger('click')
     expect(wrapper.vm.count).toBe(1)
   })
+
+  it('count should be 10', () => {
+    wrapper.setData({count: 10})
+    expect(wrapper.vm.count).toBe(10)
+  })
+
+  it('trigger click', () => {
+    wrapper.vm.count = 0
+    wrapper.find('button').trigger('click')
+    expect(wrapper.vm.count).toBe(1)
+  })
 })
